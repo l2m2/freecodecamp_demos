@@ -1,0 +1,195 @@
+@charset "UTF-8";
+:root {
+  --price-direction: row;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --price-direction: column;
+  }
+}
+body {
+  background-color: #eee;
+  font-family: "微软雅黑", "Microsoft Yahei";
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+.logo {
+  width: 60vw;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  font-weight: 400;
+}
+
+nav ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#form-section {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+.grid {
+  display: flex;
+}
+
+#features {
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: darkorange;
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: var(--price-direction, row);
+  justify-content: center;
+}
+
+.pricing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100%  / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+@media (max-width: 800px) {
+  .pricing-item {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}
+.pricing-item .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pricing-item ol {
+  margin: 15px 0;
+}
+
+.pricing-item ol li {
+  padding: 5px 0;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul li {
+  padding: 0 10px;
+}
+
+footer span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
